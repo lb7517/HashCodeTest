@@ -1,0 +1,9 @@
+注意:
+    1. Student中实现了equals方法，在其实例对象中用equals比较时结果和重写的equals有关系，默认使用Objects.equals.重
+写equals方法时，注意同时要重写hashCode方法，在Set定义中不能存储相同对象(此相同对象即要求equals要为true，equals为
+true hashCode必定相同；但是hashcode相同，equals不一定相同);
+    2. 在使用TreeMap和TreeSet是 第一个参数 是自定义类时，这个自定义类要实现内部比较器Comparable或者外部比较器Comparator
+    3. TreeMap使用了二叉权的数据结构，key是有序
+    4. 注意Map中的entrySet和keySet方法使用，entrySet返回的是Set集合并且值是Map.Entry<>类型的即Map所有key-value;
+keySet返回的是Set集合并且值是Map的所有key;
+    5. HashMap线程不安去，效率高，无序的； LinkedHashMap线程不安全，有序的(保证插入顺序或者访问顺序)
